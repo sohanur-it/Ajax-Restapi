@@ -13,9 +13,10 @@
        		})
 
        		for(let i=0;i<datas.data.length;i++){
-       			if(!datas.data[i+1]){
+       			if(!datas.data[i+1] || !datas.data[i+2] ){
        				break;
        			}
+       			
        			if(datas.data[i].employee_age == datas.data[i+1].employee_age){
        				console.log(datas.data[i].employee_age);
        				console.log(datas.data[i].employee_name);
@@ -34,7 +35,7 @@
         		`;
 
        			}
-       			else{
+       			else if(datas.data[i].employee_age !== datas.data[i+1].employee_age && datas.data[i+1].employee_age !== datas.data[i+2].employee_age){
        				console.log(datas.data[i+1].employee_age);
        				console.log(datas.data[i+1].employee_name);
 
